@@ -9,7 +9,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const handleSearch = useDebouncedCallback((input) => {
+  const handleSearchDebounced = useDebouncedCallback((input) => {
     console.log('Searching....', input);
     const params = new URLSearchParams(searchParams);
 
